@@ -1,0 +1,12 @@
+---
+CREATE_DB_SERVER: True
+
+MYSQL_ROOT_PWD: "Sharath10@"
+
+MYSQL_DB_NAME: "hello_db_new"
+
+MYSQL_DB_PASSWORD: "Hello10@"
+
+MYSQL_DB_USER: "testing"
+
+DB_HOME: "/home/ubuntu"

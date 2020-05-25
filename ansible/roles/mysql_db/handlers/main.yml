@@ -1,0 +1,12 @@
+---
+# handlers for nginx
+- name: start-db
+  service: 
+     name: mysql
+     state: started
+     enabled: yes
+
+- name: restart-db
+  service:
+     name: mysql
+     state: restarted
