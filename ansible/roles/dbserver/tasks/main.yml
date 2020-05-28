@@ -1,0 +1,45 @@
+---
+- name: Installs the MySQL server
+  block:
+  - name: Installing the MySQL server
+    apt: 
+      name: "{{ item }} "
+      state: present
+      update_cache: yes
+    with_items:
+      - mysql-server
+      - python3-pymysql
+    notify:
+    - start-db
+
+# MySQL Configuration
+## Update the Root Password
+  - name: Sets the root password
+    mysql_user:
+      name: root
+      password: "{{ MYSQL_ROOT_PWD }}"
+      login_unix_socket: /var/run/mysqld/mysqld.sock
+    notify:
+    - restart-db
+  when: CREATE_DB_SERVER == True
+  tags:
+    - never
+    - create-db-server
+    - install-all
+
+# Import DB
+- name: Create DB Objects
+  block:
+  - name: copying the SQL file
+    template:
+      src: "objects.sql"
+      dest: "{{ DB_HOME}}/objects.sql"
+
+  - name: Creating the DB Objects
+    shell: "/usr/bin/mysql -u root --password={{ MYSQL_ROOT_PWD }} <objects.sql"
+    args:
+      chdir: "{{ DB_HOME }}"
+  tags:
+    - never
+    - import-db
+    - install-all

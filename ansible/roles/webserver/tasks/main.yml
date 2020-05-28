@@ -1,0 +1,18 @@
+---
+ - name: installing webserver
+   package:
+     name: "{{ item }}"
+     state: present
+     update_cache: yes
+   with_items: 
+     - "{{ package_manager }}"
+     - "{{ web_server }}"
+   notify:
+     - start-webserver
+
+ - name: copying tomcat.conf file
+   template:
+     src: "tomcat.conf"
+     dest: "/etc/nginx/sites-available/default"
+   notify:
+     - restart-webserver

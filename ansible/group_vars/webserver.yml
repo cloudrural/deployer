@@ -1,0 +1,10 @@
+---
+#webserver variable packages
+
+package_manager: "apt"
+
+web_server: "nginx"
+
+source_dir: "bhavya"
+
+doc_root: "/var/www/html"
