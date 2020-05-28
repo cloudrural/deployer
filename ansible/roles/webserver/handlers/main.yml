@@ -1,0 +1,11 @@
+---
+# handlers for nginx
+- name: start-webserver
+  service: 
+     name: "{{ web_server }}"
+     state: started
+
+- name: restart-webserver
+  service:
+     name: "{{ web_server }}"
+     state: restarted

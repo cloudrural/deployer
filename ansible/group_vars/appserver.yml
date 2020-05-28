@@ -1,0 +1,25 @@
+---
+#home directory
+APP_HOME_DIR: "/home/testuser"
+
+#tomcat setup directory
+TOMCAT_APP_DIR: "{{APP_HOME_DIR}}/tomcat"
+
+#tomcat url
+TOMCAT_URL: "http://apachemirror.wuchna.com/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz"
+
+#zip files
+TOMCAT_ZIP_FILE: "tomcat-9.0.35.tar.gz"
+
+#defining remote source
+IS_SOURCE_IS_REMOTE: yes
+
+#name of the war file which has to deploy in webapps
+APP_WAR_FILE: "sample.war"
+
+db_user: root
+db_port: 3306
+db_password: "123123"
+db_host: localhost
+db_name: bhavya
+
