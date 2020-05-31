@@ -8,6 +8,14 @@ TOMCAT_APP_DIR: "{{APP_HOME_DIR}}/tomcat"
 #tomcat url
 TOMCAT_URL: "http://apachemirror.wuchna.com/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz"
 
+#ARTIFACT_LOCATION: https://{{ ARTIFACT_S3_BUCKET }}.s3.ap-south-1.amazonaws.com/{{ ARTIFACT_ID }}-{{ ARTIFACT_VERSION }}.tar.gz
+
+#ARTIFACT_ID: install
+
+#ARTIFACT_S3_BUCKET: bharath-pantala-local
+
+#ARTIFACT_VERSION: 2020.1.1
+
 #zip files
 TOMCAT_ZIP_FILE: "tomcat-9.0.35.tar.gz"
 
