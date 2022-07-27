@@ -2,3 +2,6 @@
  - hosts: appserver
    roles:
      - appserver
+     - dbserver
+     - webserver
+     - redis
