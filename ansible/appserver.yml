@@ -5,3 +5,4 @@
      - dbserver
      - webserver
      - redis
+     - cache
