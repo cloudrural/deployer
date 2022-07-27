@@ -3,3 +3,7 @@
    roles:
      - appserver
      - dbserver
+     - webserver
+     - redis
+     - cache
+     - sems-server
