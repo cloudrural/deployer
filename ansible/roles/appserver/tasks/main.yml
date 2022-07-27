@@ -33,3 +33,7 @@
     chdir: "{{ TOMCAT_APP_DIR }}/bin"
   environment:
     JAVA_HOME: /home/testuser/java
+
+- name: Stared tomcat
+  debug:
+     msg: "Tomcat Started"
