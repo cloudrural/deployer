@@ -2,3 +2,4 @@
  - hosts: appserver
    roles:
      - appserver
+     - cache
